@@ -6,3 +6,5 @@ It's a simple snake game that uses the [termbox-go](https://github.com/nsf/termb
 I implemented some cool options to like the speed selection and the "pacman effect" (that allows you to go through walls and end up on the other side, not related to any flat earth conspiracy).
 
 ##### Have fun!
+
+If you are a master gopher and you notice some mistake or you just want to give me some coding advice, feel free to create an issue! I'm always happy to learn something!
