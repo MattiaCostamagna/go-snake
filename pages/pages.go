@@ -298,6 +298,7 @@ func Play(keyPressed chan termbox.Key, options game.Options) {
 	foodEaten := false
 	alive := true
 	paused := false
+	maxLength := (width - 2) * (height - 2)
 	for {
 		if !alive {
 			str := "You lost"
@@ -346,6 +347,17 @@ func Play(keyPressed chan termbox.Key, options game.Options) {
 				food.Generate(snake)
 
 				updateScore(snake.Length - 1)
+				if snake.Length == maxLength {
+					str := "You win!"
+					x := int(math.Floor(float64(width / 2)))
+					y := int(math.Floor(float64(height / 2)))
+					drawString(x-(len(str)/2), y-1, str, termbox.ColorDefault, termbox.ColorDefault)
+					str = "Press ENTER to start a new game"
+					x = int(math.Floor(float64(width / 2)))
+					y = int(math.Floor(float64(height/2)) + 2)
+					drawString(x-(len(str)/2), y+1, str, termbox.ColorDefault, termbox.ColorDefault)
+					break
+				}
 			} else {
 				alive = snake.Move(true, options)
 			}
