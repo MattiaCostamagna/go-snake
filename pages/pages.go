@@ -365,7 +365,7 @@ func Play(keyPressed chan termbox.Key, options game.Options) {
 			if snake.Positions[0].X == food.Position.X && snake.Positions[0].Y == food.Position.Y {
 				foodEaten = true
 			}
-			time.Sleep(50 * time.Millisecond * time.Duration(options.Speed))
+			time.Sleep(25 * time.Millisecond * time.Duration(options.Speed))
 		}
 	}
 	for {

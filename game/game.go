@@ -17,9 +17,9 @@ type Speed int8
 const (
 	VERYFAST Speed = 1
 	FAST     Speed = 2
-	NORMAL   Speed = 4
-	SLOW     Speed = 6
-	VERYSLOW Speed = 10
+	NORMAL   Speed = 3
+	SLOW     Speed = 4
+	VERYSLOW Speed = 5
 )
 
 // Options reppresents the options of the game
