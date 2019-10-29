@@ -19,7 +19,7 @@ func main() {
 	keyPressed := make(chan termbox.Key)
 	gameOptions := game.Options{
 		PacmanEffect: true,
-		Speed:        game.FAST,
+		Speed:        game.NORMAL,
 	}
 	go func() {
 		for {
